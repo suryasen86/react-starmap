@@ -1,0 +1,45 @@
+ 
+    @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+}
+
+/* footer all pages */
+
+.cookies-section{
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  margin: 40px;
+}
+
+.cookies-span{
+  font-size: 25px;
+margin: 20px 0px 20px 0px;
+}
+.cookies-heading-one{
+font-size: 40px;
+font-family:Russo One ;
+}
+.cookies-heading-two{
+font-size: 30px;
+margin: 20px 0px 20px 0px;
+
+}
+.cookies-heading-four{
+  font-size: 20px;
+margin: 10px 0px 10px 0px;
+}
+.cookies-unorder-list , .cookies-li-list{
+  list-style: disc;
+  font-size: 17px;
+  line-height: 20px;
+}
+.cookies-content{
+  font-size: 17px;
+  line-height: 20px;
+}

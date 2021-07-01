@@ -1,0 +1,158 @@
+import React from 'react'
+import {useState} from 'react';
+import axios from 'axios';
+function Landing() {
+   const [email, setemail] = useState("")
+   function submit (e){
+	e.preventDefault();
+	if (!email){
+	alert("pls enter the email") }
+	else {
+		axios.post('/contact/subs',{email:email})
+		.then((res)=>{
+			if(res.data.status)
+			{
+				alert(res.data.message)
+			}
+		}
+
+		)
+	}
+
+   }
+   const tagline={
+	fontFamily: "Russo One",
+	fontStyle: "normal",
+	fontWeight: "normal",
+	fontSize: "36px",
+	lineHeight: "43px"
+   }
+    return (
+   <>
+   
+   <section id="moonlight-section">
+	<img src="/img/bg home.jpg" alt="" id="bg"/>
+	{/* <img src="/img/moon.png" alt="" id="moon"/> */}
+	{/* <img src="/img/image 20.png" alt="" id="mountain"/> */}
+	<img src="/img/image 20.png" alt="" id="road"/>
+	<div className="home-btn-content" style={tagline}>
+	<h2 id="text">Make Your Special Moments Memorable.</h2>
+	<button className="home-btnn " id="map"><a href="/customization" >GET YOUR STARMAP</a></button>
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	<section className="double-img">
+	{/* <button className="home-btnn " ><a href="/customization" >GET YOUR STARMAP</a></button> */}
+		<div className="img-one">
+			<img src="img/image 4.jpg" alt="" className="img-ones"/>
+		</div>
+		<div className="img-two">
+			<img src="img/image 5.jpg" alt="" className="img-twos"/>
+
+		</div>
+	</section>
+	<section id="why-starmapping">
+		<h2 className="why-star-heading">Why Starmapping?</h2>
+		<div className="why-starmapping">
+			<div className="why-description">
+				<div className="why-decp">
+					<img src="/img/award-2 1.png" alt=""/>
+					<h3 className="why-decp-heading">High-Quality Prints</h3>
+					<p className="why-decp-paragraph">With the help of our software, we use a personalized system to chalk out a beautiful starmap with exceptional features that you can enjoy for a lifetime. 
+					</p>
+				</div>
+				<div className="why-decp">
+					<img src="/img/frames 1.png" alt=""/>
+					<h3 className="why-decp-heading">Premium Frames </h3>
+					<p className="why-decp-paragraph">Utilizing our software, we use a personalized system to produce a beautiful starmap with  exceptional features that you can enjoy for a lifetime.
+					</p>
+				</div>
+				<div className="why-decp">
+					<img src="/img/Vector.png" alt=""/>
+					<h3 className="why-decp-heading">Personalised Maps </h3>
+					<p className="why-decp-paragraph">You can completely customize your star map by adding your title and footnote. Starmapping creates custom-made, one-of-a-kind maps just for you to cherish your precious moments.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section className="gift">
+		<div className="star-gift">
+			<div className="gift-images">
+				<div className="gift-image-one">
+					<img src="/img/image 3.jpg" alt="" className="side-img"/>
+				</div>
+				<div className="gift-image-two">
+					<img src="/img/image 2.jpg" alt="" className="side-img"/>
+
+				</div>
+			</div>
+			<div className="star-gift-content">
+				<h3 className="gift-heading">Why  Starmapping.in?</h3>
+				<span><img src="/img/Rectangle 33.png" alt="" className="gift-span"/></span>
+				<p className="gift-content">Star maps are perfect gifts for birthdays, weddings, anniversaries, baby showers, or any other significant event in your life you'd like to remember, or even for yourself. It's unique, memorable, and tailored for you. </p>
+			</div>
+		</div>
+	</section>
+	<section className="gift">
+		<div className="star-gift  star-gift-second  ">
+
+			<div className="star-gift-content-two">
+				<h3 className="gift-heading">Significance Of The Product
+				</h3>
+				<span><img src="/img/Rectangle 34.png" alt="" className="gift-span"/></span>
+				<p className="gift-content">As the name suggests, a starmap locates the position of stars, planets, the
+					Moon, and the Sun
+					as observed from a specific location at a particular time. These elements of the Solar System
+					keep changing from time to time, which makes every star map unique and special. We at
+					Starmapping are committed to helping you create a gift that will last a lifetime.</p>
+			</div>
+			<div className="gift-images-second">
+				<div className="gift-image-three">
+					<img src="/img/image 3.jpg" alt="" className="side-img"/>
+				</div>
+				<div className="gift-image-four">
+					<img src="/img/image 2.jpg" alt="" className="side-img"/>
+
+				</div>
+			</div>
+		</div>
+	</section>
+<section id="free-div">
+	<div className="star-gift-content-two" id="free-dive">
+		<h3 className="gift-heading">Fast, Easy & Free Delivery</h3>
+		<span><img src="/img/Rectangle 34.png" alt="" className="gift-span"/></span>
+		<p className="gift-content">We provide easy, free and quick delivery nationwide. All the products created by Starmapping are carefully designed. We use frames made from premium quality wood sourced from across the country, making our packaging eco-friendly and sustainable. </p>
+	</div>
+</section>
+
+
+	<section className="subscribe-sec">
+		<h1 className="sub-heading">Subscribe to Newsletter</h1>
+		<form onSubmit={submit} className="subscription">
+			<input type="email" value={email} onChange={(e)=>{setemail(e.target.value)}} placeholder="Email Address" className="sub-email"/>
+			<input type="submit" value="SEND" className="sub-btn"/>
+		</form>
+	</section>
+
+   </>
+    )
+}
+
+export default Landing

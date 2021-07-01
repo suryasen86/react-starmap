@@ -1,0 +1,622 @@
+*{
+  margin: 0;
+  padding:0;
+}
+
+.App{
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 70vw 30vw;
+}
+
+.mapcontainer{
+  width:100%;
+  height:100vh;
+  display: flex;
+  padding-top:20px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.App{
+    background-image:url('http://starmapping.in/background/background.jpg');
+    background-size:cover;
+    background-repeat:no-repeat; 
+}
+
+.starmap_box{
+  display: flex;
+  flex-direction: column;
+  margin:0;
+  padding:0;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index:10;
+  border:10px solid black;
+}
+
+
+.starmap_box img{
+  width:400px;
+  height:590px;
+}
+.starmap_box_circle{
+  position: absolute;
+  top: 10%;
+}
+
+.starmap_box_circle canvas{
+  position: relative;
+  z-index:-1;
+  background-color: black;
+  width:350px;
+  height:350px;
+}
+
+.starmap_box h1{
+  position: absolute;
+  top:5%;
+  font-size:18px;
+  text-align: center;
+}
+
+
+.starmap_box p{
+  text-align: center;
+  position: absolute;
+  bottom: 10%;
+  font-size:18px;
+  color: #000;
+}
+
+@media  screen and (max-width:600px) {
+  .App{
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns:100vw;
+  }
+
+ 
+  .starmap_box_circle canvas{
+    width:250px;
+    height:250px;
+  }
+  .mapcontainer{
+    height:auto;
+    padding:2rem 0rem;
+  }
+}
+
+
+
+.custext {
+  width: 70%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.customecontainer{
+  background-color: rgba(1, 2, 2, 0.5);
+}
+
+
+.customeheader{
+  display: flex;
+  justify-content: space-between;
+  border-bottom:1px solid black ;
+}
+.customeheader li{
+  list-style: none;
+  text-align: center;
+  width:100%;
+  padding:1rem 0rem;
+  font-size:25px;
+  color: #000;
+  cursor: pointer;
+  
+}
+.customeheader li:hover{
+  background-color: rgb(83, 79, 74);
+}
+.custome_body{
+  display: flex;
+  flex-wrap: wrap;
+}
+.custome_body img{
+  width:100px;
+  margin:1rem;
+  height:100px;
+  cursor: pointer;
+}
+
+.infobody{
+  display: flex;
+  width:100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.infobody input{
+  padding:1rem 1rem;
+  margin:1rem;
+}
+.infobody input:focus{
+  outline: none;
+}
+
+.infobody label{
+  color: #000;
+  font-size: 1.5rem;
+}
+.infobody button{
+  background: #8F00FF;
+  position: relative;
+  box-shadow: 0px 2px 8px rgba(102, 0, 183, 0.3);
+  border-radius: 3px;
+  height: 40px;
+    width: 50%;
+    top: auto;
+    left: auto;
+    margin: auto;
+    color: #FFFFFF;
+    border-style: none;
+    font-size: 18px;
+}
+
+.infolocationbody p{
+  padding-top: 2rem;
+  color:#ff0000;
+  word-break: break-all;
+}
+
+
+.customise{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100vh;
+  background: #ffffff;
+}
+.customise{
+  /* padding: 7px 10px 7px 10px; */
+}
+
+.btncontainer{
+  display: inline-flex;
+  justify-content: center;
+  margin-top:20px;
+  width: 100%;
+}
+
+.next-button{
+  background: #8F00FF;
+  position: relative;
+  box-shadow: 0px 2px 8px rgba(102, 0, 183, 0.3);
+  border-radius: 3px;
+  height: 40px;
+    width: 50%;
+    top: auto;
+/* bottom: -196px; */
+    left: auto;
+    margin: auto;
+    color: #FFFFFF;
+    border-style: none;
+    font-size: 18px;
+}
+
+
+
+
+
+.starmapping-frame{
+  background: url('http://starmapping.in/background/backimage.png');
+  background-size: cover;
+width: 50%;
+background-repeat: no-repeat;
+background-size: 100% 100%;
+}
+
+
+.starmapping-rects{
+  background: #ffffff;
+  width: 50%;
+}
+
+.frame-buttons{
+  display:flex;
+  position: absolute;
+  top:25%;
+
+  right:45%;
+  height:50vh;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.frame-link-buttons{
+  /* position: absolute; */
+  width: 128px;
+  height: 38px;
+  background: #DEDEDE;
+  border-radius: 3px;
+  border-style: none;
+  color: #8C8C8C;;
+}
+
+/* 
+.ImageContainer{
+  display: grid;
+    grid-template-columns:119px 119px 119px;
+    align-items: center;
+    justify-content: center;
+    margin: 100px 0px 50px 50px;
+} */
+
+.frame-link-buttons:hover,  .frame-link-buttons:active{
+  /* position: absolute; */
+  width: 128px;
+  height: 38px;
+  background: #8F00FF;
+  border-radius: 3px;
+  border-style: none;
+  color: #ffffff;
+  font-weight: bold;
+}
+@media screen and (max-width:1150px){
+
+  .frame-buttons{
+    right:40%;
+  }
+  .select-your-frames{
+    padding: 100px 10px 0px 10px;
+  }
+  .frame-buttons{
+    top:5%;
+    flex-wrap: wrap;
+    height:100px;
+    right: auto;
+    flex-direction: row;
+
+  }
+  
+
+}
+.select-single-frame{
+  height: 100px;
+  width: 100px;
+  /* background-color:#000; */
+  border:2px solid gray;
+  margin:2px;
+  border-radius: 14px;
+  cursor: pointer;
+}
+.ImageContainer{
+  display: grid;
+    grid-template-columns:119px 119px 119px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media screen and (max-width:900px) {
+  .starmap_box img{
+    width:300px;
+    height:400px;
+  } 
+  }
+
+@media  only screen and (max-width:650px)
+{
+  .infobody input{
+    /* padding:1rem 1rem; */
+    margin:0px;
+  }
+  .customise{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .starmapping-rects{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .frame-buttons{
+    top:65%;
+    margin-top: 373px;
+  }
+.gadhi{
+  font-size: 15px;
+}
+  .rects-heading {
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: normal;
+    /* font-size: 17px; */
+    line-height: 24px;
+    letter-spacing: 0.42px;
+    color: #000000;
+    padding-left: 0px;
+    padding-top: 17px;
+  }
+  .starmapping-frame {
+    width: 100%;
+  margin-bottom: 20px;
+  }
+
+  
+}
+
+
+/* @media screen and (max-width:) { */
+  
+/* } */
+
+@media  only screen and (max-width:650px)
+{
+.noob-custom{
+  margin-top: 30px;
+}
+ 
+.infobody button{
+  border: none;
+  background: #8F00FF;
+  padding:5px 10px;
+  color: #fff;
+  cursor: pointer;
+}
+
+  .ImageContainer{  
+
+background-color: #ffffff;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+.infobody input{
+ 
+  margin:3px;
+}
+
+.select-single-frame {
+  height: 59px;
+  width: 60px;
+
+
+}
+
+.next-button{
+  background: #8F00FF;
+  position: relative;
+  box-shadow: 0px 2px 8px rgba(102, 0, 183, 0.3);
+  border-radius: 3px;
+  height: 40px;
+    width: 100%;
+    top: auto;
+    left: auto;
+    margin: auto;
+    color: #FFFFFF;
+    border-style: none;
+    font-size: 18px;
+}
+
+.starmap_box img {
+  width: 246px;
+  height: 280px;
+}
+ 
+
+.frame-buttons {
+top:52%;
+}
+.frame-link-buttons {
+  width: 86px;
+}
+
+.starmap_box {
+  top: -17px;
+}
+  .select-your-frames{
+      padding: 0px;
+  }
+  .frame-buttons{
+    /* display: none; */
+display: flex;
+flex-wrap: nowrap;
+width: 100%;
+  }
+
+  .infobody label{
+    font-size: 15px;
+  }
+  .starmap_box p {
+    font-size: 14px;
+  }
+  /* .infobody input{
+    padding:0px;
+    margin:1rem;
+  } */
+  .infobody label{
+    color: #000;
+    font-size: 16px;
+  }
+  .mapcontainer{
+    height: 50vh;
+  }
+
+} 
+
+#location{
+  width: 100%;
+}
+#locationdiv{
+  width: 35%;
+}
+
+
+@media  only screen and (max-width:400px)
+{
+  .infobody button{
+    border: none;
+    background: #8F00FF;
+    padding:5px 10px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .infobody label{
+    color: #000;
+    font-size: 15px;
+  }
+
+  .ImageContainer{  
+
+background-color: #ffffff;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.select-single-frame {
+  height: 59px;
+  width: 60px;
+
+
+}
+.locationdiv {
+width: 70%;
+padding: 12px 20px;
+}
+
+.next-button{
+  background: #8F00FF;
+  position: relative;
+  box-shadow: 0px 2px 8px rgba(102, 0, 183, 0.3);
+  border-radius: 3px;
+  height: 40px;
+    width: 100%;
+    top: auto;
+    left: auto;
+    margin: auto;
+    color: #FFFFFF;
+    border-style: none;
+    font-size: 18px;
+}
+
+.starmap_box img {
+  width: 246px;
+  height: 280px;
+}
+ 
+
+.frame-buttons {
+top:0px;
+margin-top: 185px;
+}
+.frame-link-buttons {
+  width: 86px;
+}
+#meeting{
+ width: 100%; 
+}
+
+.starmap_box {
+  top: -17px;
+}
+  .select-your-frames{
+      padding: 0px;
+  }
+  .frame-buttons{
+    /* display: none; */
+display: flex;
+flex-wrap: nowrap;
+  }
+
+
+  .custext{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+  }
+#location {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; 
+}
+#locationdiv {
+  width: 100%;
+}
+  .starmap_box p {
+    font-size: 14px;
+  }
+  /* .infobody input{
+    padding:0px;
+    margin:1rem;
+  } */
+  input[type=datetime-local], select {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .infobody label{
+    color: #000;
+    font-size: 16px;
+  }
+  .mapcontainer{
+    height: 50vh;
+  }
+
+}
+
+
+
+
+
+
+
+
+body{
+  /* background-color: white; */
+}
+.btnnn{
+  border: none;
+  background: #8F00FF;
+  padding:5px 10px;
+  color: #fff;
+  cursor: pointer;
+  margin: 5px;
+}
+
+input[type=datetime-local], select {
+  width: 35%;  
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+ h1 {
+font-size: 20px;
+}

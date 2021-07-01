@@ -1,0 +1,193 @@
+*{
+    margin: 0;
+    padding:0;
+  }
+  
+  .App{
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 70vw 30vw;
+  }
+  
+  .mapcontainer1{
+    width:100%;
+    height:100vh;
+    display: flex;
+    padding-top:20px;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .App{
+      
+      background-size:cover;
+      background-repeat:no-repeat; 
+  }
+  
+  .starmap_box1{
+    display: flex;
+    flex-direction: column;
+    margin:0;
+    padding:0;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index:10;
+  }
+  
+  
+  .starmap_box1 img{
+    width:1000px;
+    height:1300px;
+  }
+  .starmap_box_circle1{
+    position: absolute;
+    top: 10%;
+  }
+  
+  .starmap_box_circle1 canvas{
+    position: relative;
+    z-index:-1;
+    background-color: black;
+    width:900px;
+    height:900px;
+  }
+  
+  .starmap_box1 h1{
+    position: absolute;
+    top:5%;
+    font-size:18px;
+    text-align: center;
+  }
+  
+  
+  .starmap_box1 p{
+    text-align: center;
+    position: absolute;
+    bottom: 10%;
+    color: #000;
+  }
+  
+  @media  screen and (max-width:600px) {
+    .App{
+      display: grid;
+      justify-content: space-between;
+      grid-template-columns:100vw;
+    }
+  
+    .starmap_box1 img{
+      width:300px;
+      height:400px;
+    }
+    .starmap_box_circle1 canvas{
+      width:250px;
+      height:250px;
+    }
+    .mapcontainer1{
+      height:auto;
+      padding:2rem 0rem;
+    }
+  }
+  
+  
+  
+  
+  
+  .customecontainer1{
+    background-color: rgba(1, 2, 2, 0.5);
+  }
+  
+  
+  .customeheader1{
+    display: flex;
+    justify-content: space-between;
+    border-bottom:1px solid black ;
+  }
+  .customeheader1 li{
+    list-style: none;
+    text-align: center;
+    width:100%;
+    padding:1rem 0rem;
+    font-size:25px;
+    color: #fff;
+    cursor: pointer;
+    
+  }
+  .customeheader1 li:hover{
+    background-color: rgb(83, 79, 74);
+  }
+  .custome_body1{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .custome_body1 img{
+    width:100px;
+    margin:1rem;
+    height:100px;
+    cursor: pointer;
+  }
+  
+  .infobody1{
+    display: flex;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .infobody1 input{
+    padding:1rem 1rem;
+    margin:1rem;
+  }
+  .infobody1 input:focus{
+    outline: none;
+  }
+  
+  .infobody label{
+    color: #fff;
+    font-size: 1.5rem;
+  }
+  /* .infobody button{
+    border: none;
+    background: #8F00FF;
+    padding:1rem 2rem;
+    color: #fff;
+    cursor: pointer;
+  }
+   */
+  .infolocationbody p{
+    padding-top: 2rem;
+    color:#ff0000;
+    word-break: break-all;
+  }
+  
+
+  /* .frame-buttons{
+    position: absolute;
+    top:25%;
+    display:flex;
+    right:45%;
+    height:50vh;
+    flex-direction: column;
+    justify-content: space-evenly;
+  } */
+  
+  
+  .frame-link-buttons{
+    /* position: absolute; */
+    /* width: 128px; */
+    height: 38px;
+    background: #DEDEDE;
+    border-radius: 3px;
+    border-style: none;
+    color: black;
+  }
+
+
+  .admin-h ,.admin-m{
+    font-size: 50px;
+  }
+  .admin-l{
+    font-size: 30px;
+  }.admin-p{
+    font-size: 25px;
+  }
