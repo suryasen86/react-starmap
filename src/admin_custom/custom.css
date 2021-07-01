@@ -452,13 +452,7 @@ margin-top: 332px;
 
 } 
 
-#location{
-  width: 100%;
-}
-#locationdiv{
-  width: 35%;
-}
-
+ 
 
 @media  only screen and (max-width:400px)
 {
@@ -608,7 +602,7 @@ body{
 }
 
 input[type=datetime-local], select {
-  width: 35%;  
+  width: 70%;  
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;

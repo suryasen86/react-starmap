@@ -362,7 +362,7 @@ background-size: 100% 100%;
 @media  only screen and (max-width:650px)
 {
 .noob-custom{
-  margin-top: 30px;
+  /* margin-top: 30px; */
 }
  
 .infobody button{
@@ -453,13 +453,7 @@ width: 100%;
 
 } 
 
-#location{
-  width: 100%;
-}
-#locationdiv{
-  width: 35%;
-}
-
+ 
 
 @media  only screen and (max-width:400px)
 {
@@ -610,7 +604,7 @@ body{
 }
 
 input[type=datetime-local], select {
-  width: 35%;  
+  width: 70%;  
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
