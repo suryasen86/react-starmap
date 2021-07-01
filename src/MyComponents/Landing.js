@@ -34,9 +34,9 @@ function Landing() {
  	<button className="get-your-starmap-here"> <a href="/customization">GET YOUR STARMAP </a></button> 
 </div>
 
-   <section  id="moonlight-section" >
+   <section id="moonlight-section" >
  
-		<img   src="/img/bg home.jpg" alt="" id="bg"/>
+		{/* <img className=""   src="/img/bg home.jpg" alt="" id="bg"/> */}
 	 
 		<img src="/img/mountain-final.png" alt="" id="mountain"/>
 	 

@@ -26,7 +26,8 @@ body {
 
 /* moonlight animation */
 
-#moonlight-section{position: relative;
+#moonlight-section{
+  position: relative;
   width: 100%;
   height: 100vh;
   overflow: hidden;
@@ -282,7 +283,7 @@ nav a{
 #why-starmapping{
   
   margin-top: 50px;
-  background: url(/img/image\ 17.png);
+  /* background: url(/img/image\ 17.png); */
   
   width: 100%;
 }
@@ -329,10 +330,21 @@ margin-top: -245px;}
 }
 
  .noob-bg{
-background: url(/img/image\ 17.png);}
+background: url(/img/image\ 17.png);
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+}
+
+#moonlight-section{
+  background: url(/img/home\ bg1.jpg);
+  background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+}
 
 .subscribe-sec{
-  background: url(/img/image\ 17.png);
+  /* background: url(/img/image\ 17.png); */
 width: 100%;
 display: flex;
 flex-direction: column;
@@ -1438,26 +1450,7 @@ margin-bottom: 20px;
 
 
 }
-.frame-buttons{
-  display: flex;
-}
-.frame-link-buttons1,
-.frame-link-buttons2,
-.frame-link-buttons3,
-.frame-link-buttons4,
-.frame-link-buttons5
-{
-  position: unset;
-  width: 67px;
-  height: 38px;
-left: 0px;
-top: 0px;
 
-background: #DEDEDE;
-border-radius: 0px;
-border-style: none;
-color: #8C8C8C;
-}
 
 .frame-link-buttons5
 {width: 75px;}
@@ -1584,16 +1577,7 @@ text-decoration: none;
 .manish2 img {
   padding-left: 100px;
 }
-@media  only screen and (max-width:650px){
-  .manish2 img {
-    padding-left: 0px;
-  }
-}
-@media  only screen and (max-width:400px){
-  .manish2 img {
-    padding-left: 0px;
-  }
-}
+
 
 
 .home-page-h-four {
@@ -1624,4 +1608,52 @@ text-decoration: none;
   text-decoration: none;
   color: white;
 }
- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.frame-buttons{
+  display: flex;
+}
+.frame-link-buttons1,
+.frame-link-buttons2,
+.frame-link-buttons3,
+.frame-link-buttons4,
+.frame-link-buttons5
+{
+  position: unset;
+  width: 67px;
+  height: 38px;
+left: 0px;
+top: 0px;
+
+background: #DEDEDE;
+border-radius: 0px;
+border-style: none;
+color: #8C8C8C;
+}
+
+
+
+.parallax{
+  background: url(/public/img/home\ bg1.jpg) no-repeat center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
