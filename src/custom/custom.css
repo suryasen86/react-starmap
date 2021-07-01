@@ -518,7 +518,8 @@ padding: 12px 20px;
  
 
 .frame-buttons {
-top:0px;
+  position: unset;
+/* top:0px; */
 margin-top: 185px;
 }
 .frame-link-buttons {
@@ -619,4 +620,7 @@ input[type=datetime-local], select {
 }
  h1 {
 font-size: 20px;
+}
+html {
+  background-color: white;
 }
