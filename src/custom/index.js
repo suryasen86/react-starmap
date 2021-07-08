@@ -189,9 +189,9 @@ function SizeBody()
   <> <div className="container text-center">
     <h1 style={{color:'black'}} >Size is here!</h1>
  
- <button className="  size-button " >12 x 16 inch                    (30 x 40 cm)                    $69 $49</button>
- <button className="  size-button ">12 x 16 inch                    (30 x 40 cm)                    $69 $49</button>    
- <button  className=" size-button">12 x 16 inch                    (30 x 40 cm)                    $69 $49</button>
+ <button className="  size-button " >A-3 (11.75 x 16.5)inch  <del>3000</del> 1800 INR    </button>
+ <button className="  size-button ">A-4 (8.25 x 11.75) inch <del>2500</del>  1500 INR </button>    
+ {/* <button  className=" size-button">12 x 16 inch                    (30 x 40 cm)                    $69 $49</button> */}
  
     <button className="btn btnnn" onClick={()=>setinfo((e)=>({...infodemo}))}>Update Size</button>
     </div>
@@ -286,10 +286,10 @@ async function checkout(){
         <div className="starmapping-rects">
         
         <div className="frame-buttons">
-            <button className="frame-link-buttons bttn" style={Body=='Image'?{background:'#8F00FF'}:{}} onClick={()=>setBody("Image")}>Design</button>
-            <button className="frame-link-buttons bttn" style={Body=='Movement'?{background:'#8F00FF'}:{}} onClick={()=>setBody("Movement")}>Movement</button>
-            <button className="frame-link-buttons bttn" style={Body=='Text'?{background:'#8F00FF'}:{}} onClick={()=>setBody("Text")}>Text</button>
-            <button className="frame-link-buttons bttn"  style={Body=='Size'?{background:'#8F00FF'}:{}} onClick={()=>setBody("Size")}>Frame Size</button>
+            <button className="frame-link-buttons bttn" style={Body=='Image'?{background:'#8F00FF',color:'white'}:{}} onClick={()=>setBody("Image")}>Design</button>
+            <button className="frame-link-buttons bttn" style={Body=='Movement'?{background:'#8F00FF',color:'white'}:{}} onClick={()=>setBody("Movement")}>Movement</button>
+            <button className="frame-link-buttons bttn" style={Body=='Text'?{background:'#8F00FF',color:'white'}:{}} onClick={()=>setBody("Text")}>Text</button>
+            <button className="frame-link-buttons bttn"  style={Body=='Size'?{background:'#8F00FF',color:'white'}:{}} onClick={()=>setBody("Size")}>Frame Size</button>
         </div>
           <div className="noob-custom" style={{backgroundColor:"white"}}>
        
