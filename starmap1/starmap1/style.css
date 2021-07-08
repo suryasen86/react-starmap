@@ -1,0 +1,10 @@
+#celestial-map{
+  background-color: black;
+  width:500px;
+  height:500px;
+}
+
+#celestial-map canvas{
+  width:100%;
+  height:100%;
+}

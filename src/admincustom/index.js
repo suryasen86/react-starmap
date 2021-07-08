@@ -60,7 +60,7 @@ const [Data, setData] = React.useState({
   geopos:[17.496576,70.843095],
   form: false,
   advanced:true,
-  background: { fill: "#3629ac", stroke: "#000000", opacity:1},
+  background: { fill: "#000", stroke: "#000000", opacity:1},
   projection: "airy",
   datapath: "./data/",
   daterange:[1,1],
@@ -87,12 +87,6 @@ const [Data, setData] = React.useState({
     bounds: false,  // Show constellation boundaries
     boundstyle: { stroke: "#ffff",  width: 0, opacity: 0.8, dash: [2, 4] }
   },
-  background: {        // Background style
-    fill: "transparent",   // Area fill
-    opacity: 0.1, 
-    stroke: "#fff", // Outline
-    width: 0.05
-  }, 
   planets: { show: false},
   mw: {
     show: false,    // Show Milky Way as filled polygons
@@ -131,7 +125,6 @@ const [Body, setBody] = React.useState("Image")
 const [info, setinfo] = React.useState({heading:"Hey...",message:"No Matter What I will Love You Always...",location:"Mumbai 1 N ,17 E",place:"Here",lat:"17.496576",log:"70.843095"})
 const [Formview, setFormview] = React.useState(['Image','Movement','Text','Size'])
 
-console.log(Datapage)
 
 
 React.useEffect(()=>{

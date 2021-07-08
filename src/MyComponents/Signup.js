@@ -11,7 +11,7 @@ const [message, setmessage] = useState("")
 function submit(){
 
 
-    axios.post('/api/login',{email:email,password:pass})
+    axios.post('http://localhost:5000/api/login',{email:email,password:pass})
     .then((res)=>{
         if(res.data.status)
         {
@@ -38,7 +38,7 @@ function submit(){
         <div className="contact-page">
             <div className="img-form">
                 <div className="contact-img coco-info">
-                    <img src="/img/contact.png" alt="" className="co-img"/>
+                    <img src="/img/contact.svg" alt="" className="co-img"/>
                 </div>
                 <div className="contact-form coco-info" onSubmit={(e)=>{
                     e.preventDefault()

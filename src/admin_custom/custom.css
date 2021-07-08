@@ -245,7 +245,8 @@ background-size: 100% 100%;
   background: #DEDEDE;
   border-radius: 3px;
   border-style: none;
-  color: #8C8C8C;;
+  color: gray;
+  font-weight: bold;
 }
 
 /* 
@@ -257,7 +258,7 @@ background-size: 100% 100%;
     margin: 100px 0px 50px 50px;
 } */
 
-.frame-link-buttons:hover,  .frame-link-buttons:active{
+.frame-link-buttons:hover,  .frame-link-buttons:active ,.frame-link-buttons:focus{
   /* position: absolute; */
   width: 128px;
   height: 38px;
@@ -278,7 +279,7 @@ background-size: 100% 100%;
   .frame-buttons{
     top:5%;
     flex-wrap: wrap;
-    height:100px;
+    height:50px;
     right: auto;
     flex-direction: row;
   }
@@ -512,7 +513,7 @@ padding: 12px 20px;
 
 .frame-buttons {
 top:0px;
-margin-top: 330px;
+margin-top: 410px;
 }
 .frame-link-buttons {
   width: 86px;

@@ -57,7 +57,7 @@ function Work() {
                 </div>
             </div>
             <div class="work-image">
-               <img src="/img/gola.png" alt="" class="work-img"/>
+               <img src="/img/work.svg" alt="" class="work-img"/>
             </div>
         </div>
     </section>

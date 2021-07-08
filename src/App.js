@@ -18,6 +18,7 @@ import CustomAdmin from './admincustom';
 import AdminCustom from './admin_custom'
 import Terms from './terms/Terms';
 import Cookies from './terms/Cookies';
+import GetStar from './admin/getstar';
 
 const checktoken=()=>{
 
@@ -77,6 +78,7 @@ const ProtectedRouter=({component:Component,...rest})=>(
                 <Route path="/register" component={Register} exact />
                 <Route path="/privacy" component={Privacy} exact />
                 <ProtectedRouter path="/admin" component={Admin} exact />
+                <ProtectedRouter path="/getstar" component={GetStar} exact />
                 <ProtectedRouter path="/admincustomization" component={CustomAdmin} exact />
                 <ProtectedRouter path="/admin-customization" component={AdminCustom} exact />
 

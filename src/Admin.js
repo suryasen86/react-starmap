@@ -17,7 +17,7 @@ function Admin(porps) {
             console.log(JSON.parse(Data).userdata)
         }
 
-        axios.get('/api/admin')
+        axios.get('http://localhost:5000/api/admin')
         .then((res)=>{
           if(Array.isArray(res.data))
           { 
@@ -35,6 +35,15 @@ function Admin(porps) {
       localStorage.setItem("Map",JSON.stringify(e))
       setTimeout(()=>{
         window.location.href='/admincustomization';
+
+      },200)
+    }
+
+    function redirect_star(e)
+    {
+      localStorage.setItem("Map",JSON.stringify(e))
+      setTimeout(()=>{
+        window.location.href='/getstar';
 
       },200)
     }
@@ -59,6 +68,7 @@ function Admin(porps) {
       <th scope="col">order details</th>
       <th scope="col">order status</th>
       <th scope="col">ViewDesign</th>
+      <th scope="col">View starmap</th>
     </tr>
   </thead>
   <tbody>
@@ -76,6 +86,7 @@ function Admin(porps) {
       <td>{e.orderdetail}</td>
       <td> {e.status}</td>
       <td><button className="btn btn-success" onClick={()=>{redirect_page(e)}} > ViewDesign</button></td>
+      <td><button className="btn btn-success"  onClick={()=>{redirect_star(e)}}  >Viewmap</button></td>
     </tr>
       )  
     

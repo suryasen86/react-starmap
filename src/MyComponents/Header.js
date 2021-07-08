@@ -17,8 +17,8 @@ const defaultProps = {
 
 function Header(props) {
     return (
-        <div>
-     <nav className="navbar navbar-expand-lg navbar-dark" style={{backgroundImage:`url()`}} >
+        <div   >
+     <nav className="navbar navbar-expand-lg navbar-dark"   >
         <div className="container-fluid">
           <a className="navbar-brand manish2" href="/"> <img  src="/img/navlogo.svg" alt=""/></a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

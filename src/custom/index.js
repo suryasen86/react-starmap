@@ -60,7 +60,7 @@ const [Data, setData] = React.useState({
   geopos:[17.496576,70.843095],
   form: false,
   advanced:true,
-  background: { fill: "#3629ac", stroke: "#000000", opacity:1},
+  background: { fill: "#000", stroke: "#000000", opacity:1},
   projection: "airy",
   datapath: "./data/",
   daterange:[1,1],
@@ -87,12 +87,6 @@ const [Data, setData] = React.useState({
     bounds: false,  // Show constellation boundaries
     boundstyle: { stroke: "#ffff",  width: 0, opacity: 0.8, dash: [2, 4] }
   },
-  background: {        // Background style
-    fill: "transparent",   // Area fill
-    opacity: 0.1, 
-    stroke: "#fff", // Outline
-    width: 0.05
-  }, 
   planets: { show: false},
   mw: {
     show: false,    // Show Milky Way as filled polygons
@@ -174,9 +168,9 @@ function Info()
 </h5>
     <div className="infobody">
       <label className="gadhi" style={{color:'black' ,fontSize:"15px"}}>Title</label>
-      <input style={{color:'black'}} type="text" className="custext" value={infodemo.heading} name="name" onChange={(e)=>setinfodemo((pre)=>({...pre,heading:e.target.value}))} placeholder="Name"/>
+      <input style={{color:'black'}} type="text" className="custext" value={infodemo.heading}  name="name" onChange={(e)=>setinfodemo((pre)=>({...pre,heading:e.target.value}))} placeholder="Name"/>
       <label className="gadhi"  style={{color:'black',fontSize:"15px"}}>Custom Line Footer</label>
-      <input style={{color:'black'}} type="text" className="custext" name="message" value={infodemo.message} onChange={(e)=>setinfodemo((pre)=>({...pre,message:e.target.value}))} placeholder="Message "/>
+      <input style={{color:'black'}} type="text" className="custext" name="message" value={infodemo.message} maxlength = "30" onChange={(e)=>setinfodemo((pre)=>({...pre,message:e.target.value}))} placeholder="maxlength 30 charactors   "/>
     
       {/* <input type="text" id="fname" name="firstname" placeholder="Your name.."/>
       <input type="text" id="lname" name="lastname" placeholder="Your last name.."/> */}
@@ -194,19 +188,11 @@ function SizeBody()
   return(
   <> <div className="container text-center">
     <h1 style={{color:'black'}} >Size is here!</h1>
-    <label  style={{color:'black'}} htmlFor="size1"> A-4 -- 1500 INR</label>
-    <input type="radio" value="A-4" id="size1" placeholder="" name="size" onChange={(e)=>{setinfodemo((pre)=>({...pre,size:e.target.value}))}}/>
-<br />
-        <label style={{color:'black'}}  htmlFor="size2">A-3 -- 1800 INR</label>
-        <input type="radio" value="A-3"  id="size2"  placeholder="" name="size"   onChange={(e)=>{setinfodemo((pre)=>({...pre,size:e.target.value}))}}/>
-      <br />
-        <label  style={{color:'black'}} htmlFor="size3">A-2 -- 2500 INR</label>
-
-
-    <input type="radio" value="A-2"  id="size3"   placeholder=""  name="size" onChange={(e)=>{setinfodemo((pre)=>({...pre,size:e.target.value}))}}/>
-
-
-<br />
+ 
+ <button className="  size-button " >12 x 16 inch                    (30 x 40 cm)                    $69 $49</button>
+ <button className="  size-button ">12 x 16 inch                    (30 x 40 cm)                    $69 $49</button>    
+ <button  className=" size-button">12 x 16 inch                    (30 x 40 cm)                    $69 $49</button>
+ 
     <button className="btn btnnn" onClick={()=>setinfo((e)=>({...infodemo}))}>Update Size</button>
     </div>
   </>
@@ -226,6 +212,7 @@ function LocationText(){
     <div className="infobody">
       <label       style={{color:"black", fontSize:"15px"}}>Location:</label>
       <Location lat_lng={lat_lng}/>
+
       <label       style={{color:"black", fontSize:"15px"}}>Date:</label>
       <input type="datetime-local" 
        id="meeting" 
@@ -234,7 +221,7 @@ function LocationText(){
        value={infodemo.place}
        onChange={(e)=>setinfodemo((pre)=>({...pre,place:e.target.value}))}
        defaultValue="2021-08-01"/>
-      <button onClick={()=>setinfo(infodemo)}>Update </button>
+      <button onClick={()=>setinfo(infodemo)}>Update</button>
     </div>
   </>
   )
@@ -281,7 +268,7 @@ async function checkout(){
 
   return (
     <>
-    {/* <Header/> */}
+    <Header/>
    
    <section className="customise">
         <div className="starmapping-frame mapcontainer">

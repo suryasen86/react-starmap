@@ -1,94 +1,38 @@
-import React from 'react'
-import PlacesAutocomplete, {
-    geocodeByAddress,
-    getLatLng,
-  } from 'react-places-autocomplete';
-
-  import Geocode from "react-geocode";
-  Geocode.setApiKey("AIzaSyDSSM84yWo05immsKgzctZ2qphMj6VfSrE");
-  Geocode.setLanguage("en");
-  Geocode.setRegion("es");
-  Geocode.setLocationType("ROOFTOP");
-
-
+import React from 'react';
+import axios from 'axios';
 
 
 export default function Location({lat_lng}) {
         const [address, setaddress] = React.useState("")
 
 
+        const getlocation=()=>{
+        axios.get(`https://open.mapquestapi.com/geocoding/v1/address?key=DJHa0vAAWRQgACylHGbu1JFDXM91sGyb&location=${address}`)
+        .then((res)=>{
+          if(Array.isArray(res.data.results)&&res.data.results.length)
+          {
+            if(Array.isArray(res.data.results[0].locations)&&res.data.results[0].locations.length)
+            {
+              if(res.data.results[0].locations[0].latLng)
+              {
+                let data=res.data.results[0].locations[0].latLng
+                lat_lng(data.lat,data.lng,address)
+              }
+            }
+          }
+        })
+        .catch((e)=>{
+          // lat_lng(34.016242,138.435295)
+        })
 
-
-      const  handleChange = address => {
-            setaddress(address)
-          };
-
-
-    const handleSelect = address => {
-
-      Geocode.fromAddress(address ).then(
-        (response) => {
-          const { lat, lng } = response.results[0].geometry.location;
-          lat_lng(lat, lng,address);
-        },
-        (error) => {
-          console.error(error);
         }
-      );
-
-      setaddress(address)
-
-      geocodeByAddress(address)
-      .then(results => {
-            getLatLng(results[0])})
-          .then(latLng => console.log('Success', latLng))
-          .catch(error => console.error('Error', error));
-      };
-
-
-
 
 
     return (
         <>
-        <PlacesAutocomplete
-        value={address}
-        onChange={(e)=>handleChange(e)}
-        onSelect={(e)=>handleSelect(e)}
-      >
-        {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
-          <div id="locationdiv"  >
-            <input   className="custext"  type="text"   id="location" style={{color:"black"}}
-              {...getInputProps({
-                placeholder: 'Search Places ...',
-                className: 'location-search-input',
-              })}
-            />
-            <div className="autocomplete-dropdown-container">
-              {loading && <div style={{color:"black"}}>Loading...</div>}
-              {suggestions.map(suggestion => {
-                const className = suggestion.active
-                  ? 'suggestion-item--active'
-                  : 'suggestion-item';
-                
-                const style = suggestion.active
-                  ? { backgroundColor: '#fafafa', cursor: 'pointer' }
-                  : { backgroundColor: '#ffffff', cursor: 'pointer' };
-                return (
-                  <div
-                    {...getSuggestionItemProps(suggestion, {
-                      className,
-                      style,
-                    })}
-                  >
-                    <span>{suggestion.description}</span>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        )}
-      </PlacesAutocomplete>  
+          <input style={{color:"black"}} type="text" placeholder="city" onChange={(e)=>setaddress(e.target.value)}/>
+          <button onClick={()=>getlocation()}>Change location</button>
+
         </>
     )
 }

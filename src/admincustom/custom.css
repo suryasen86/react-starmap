@@ -191,3 +191,9 @@
   }.admin-p{
     font-size: 25px;
   }
+  .customise1{
+    background-color: black;
+  }
+  html {
+    background-color: white;
+  }

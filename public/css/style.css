@@ -88,6 +88,8 @@ color: #FFFFFF;
 
 .home-btnn{
   border:1px solid white;
+  /* box-shadow:5px 10px #888888; */
+  box-shadow: -1px 5px #868686;
 
 border-radius: 3px;
 /* z-index: 111; */
@@ -99,6 +101,7 @@ position: relative;
 }
 .home-btnn:hover ,.home-btnn:active{
   background: #8F00FF;
+  box-shadow: -1px 5px #9798DF;
 
 }
 .home-btnn a{
@@ -113,6 +116,7 @@ line-height: 54px;
 text-shadow: 0px 1px 6px rgba(255, 255, 255, 0.5);
 padding: 30px;
 border: none;
+
 }
 .home-btnn a:hover, a:active{
   color: white;
@@ -492,7 +496,7 @@ margin-bottom: 30px;
 
 .sub-email{
   width: 245px;
-height: 43px;
+  height: 53px;
   font-family: PT Sans;
 font-style: normal;
 font-weight: normal;
@@ -501,6 +505,7 @@ line-height: 21px;
 border: none;
 color: #ffffff;
 background: #000000;
+padding: 13px;
 
 }
 
@@ -517,7 +522,8 @@ font-family: PT Sans;
 font-style: normal;
 font-weight: bold;
 font-size: 16px;
-line-height: 21px;
+margin: 7px;
+line-height: 1px;
 color: black;
 
 }
@@ -532,7 +538,8 @@ font-family: PT Sans;
 font-style: normal;
 font-weight: bold;
 font-size: 16px;
-line-height: 21px;
+margin: 7px;
+line-height: 1px;
 color: #FFFFFF;
 
 }
@@ -1124,6 +1131,7 @@ color: #000000;
 }
 .imp-pages{
   font-family: PT Sans;
+  text-align: center;
 font-style: normal;
 font-weight: normal;
 font-size: 14px;
@@ -1172,6 +1180,8 @@ footer{
     flex-direction:column;
     padding-left: 10px;
     padding-bottom: 20px;
+    z-index: 100;
+    height: 650px;
    }
 
    .footer-logo{
@@ -1183,8 +1193,14 @@ footer{
 
 
   .footer-payment-option{
-    margin:0px;
+  margin:0px;
   margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+justify-content: center;
+align-items: center;
+
+
   } 
   .footer-ul {
     margin-top: 0px;
@@ -1537,7 +1553,8 @@ margin-bottom: 20px;
   height: 37px;
   color: #fff;
   margin: 5px 20px 5px 20px;
-  background: #8F00FF;
+  /* background: #8F00FF; */
+  background: linear-gradient(151.93deg, #C134F4 17.39%, #3822F5 108.55%);
 box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
 backdrop-filter: blur(4px);
 /* Note: backdrop-filter has minimal browser support */
@@ -1598,7 +1615,11 @@ text-decoration: none;
 
 @media  only screen and (max-width:400px)
 
-{
+{.manish2 img {
+  padding-left: 0px;
+}
+
+
 .home-page-h-four {
   width: 220px;
   font-size: 19px;
@@ -1657,3 +1678,22 @@ color: #8C8C8C;
   background-size: cover;
   background-attachment: fixed;
 }
+
+.short-images img {
+  margin: 3px;
+}
+ 
+  .bitch{
+    margin-bottom: 0px;
+    padding-left: 0px;
+  }
+  .subscription{
+    border-radius:8px;
+  }
+
+ .moonlight-section {
+   /* box-shadow: #3822F5; */
+ }
+ nav {
+   background-image: url(/public/img/manishbox.png);
+ }

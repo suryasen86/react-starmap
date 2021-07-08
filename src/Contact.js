@@ -61,7 +61,7 @@ function Contact() {
         <div class="contact-page">
             <div class="img-form">
                 <div class="contact-img coco-info">
-                    <img src="/img/contact.png" alt="" class="co-img"/>
+                    <img src="/img/contact.svg" alt="" class="co-img"/>
                 </div>
                 <div class="contact-form coco-info">
                     <form onSubmit={subcontact} class="form-co">

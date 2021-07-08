@@ -41,7 +41,7 @@ React.useEffect(()=>{
             alert("please fill all the details")
         } 
      else {
-        axios.post('/api/checkout/neworder',{name:name,email:email,number:number,add:add,starmap:await localStorage.getItem('StarMap')})
+        axios.post('http://localhost:5000/api/checkout/neworder',{name:name,email:email,number:number,add:add,starmap:await localStorage.getItem('StarMap')})
         .then((res)=>{
             console.log(res.data)
             if(res.data.status)

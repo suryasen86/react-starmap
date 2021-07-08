@@ -10,20 +10,20 @@ function Footer() {
 			</div>
 			
 			<ul class="footer-ul">
-				<li class="footer-icons"><img src="/img/facebook.png" alt="" class="fb-icon"/> </li>
-				<li class="footer-icons"><img src="/img/whatsapp.png" alt="" class="fb-icon" /></li>
-				<li class="footer-icons"><img src="/img/instagram.png" alt="" class="fb-icon"/></li>
+				<li class="footer-icons"><img src="/img/facebook.svg" alt="" class="fb-icon"/> </li>
+				<li class="footer-icons"><img src="/img/whatsapp.svg" alt="" class="fb-icon" /></li>
+				<li class="footer-icons"><img src="/img/instagram.svg" alt="" class="fb-icon"/></li>
 			</ul>
 		</div>
 		<div class="footer-imp">
 			<h3 class="footer-heading">Important Information</h3>
 			<span><img src="/img/Rectangle 33.png" alt="" class="imp-span"/></span>
-			<ul>
+			<ul className="bitch">
 			<a href="/contact"><li class="imp-pages">Contact</li> </a>
 			<a href="/work"><li class="imp-pages">How it works</li> </a>
 			<a href="/privacy"><li class="imp-pages">Privacy Policy</li></a>
 			<a href="/cookies"><li class="imp-pages">Cookie Policy</li></a>
-			<a href="/privacy"><li class="imp-pages"> Terms and Condition</li></a>
+			<a href="/terms"><li class="imp-pages"> Terms and Condition</li></a>
 			<a href="/return"><li class="imp-pages">Return & Cancellation</li></a>
 			</ul>
 		</div>
@@ -41,10 +41,12 @@ function Footer() {
 				<img src="/img/mastercard.svg" alt="" class="small-payment-option"/>
 				<img src="/img/american.svg" alt="" class="small-payment-option"/>
 				<img src="/img/stripe.svg" alt="" class="small-payment-option"/>
-				<img src="/img/paypalsmall" alt="" class="small-payment-option"/>
+				<img src="/img/paypalsmall.svg" alt="" class="small-payment-option"/>
 			</div>
 		</div>
+		{/* <h1 style={{color:"black"}}>Developed by <a href=""> Cretmark</a></h1> */}
 	</footer>
+
         </div>
     )
 }

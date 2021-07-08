@@ -39,7 +39,7 @@ function Landing() {
 		{/* <img className=""   src="/img/bg home.jpg" alt="" id="bg"/> */}
 	 
 		<img src="/img/mountain-final.png" alt="" id="mountain"/>
-	 
+		{/* <img src="/img/manishbox.svg" alt="" id=""/> */}
 		<div class="home-btn-content">
 			<h1 id="text">A UNIQUE GIFT - STAR MAP</h1>
 			{/* <h2 id="text">Capture Your Cherished <br/> Memories in a Frame</h2> */}
@@ -180,7 +180,7 @@ function Landing() {
 	<section className="subscribe-sec">
 		<h1 className="sub-heading">Subscribe to Newsletter</h1>
 		<form onSubmit={submit} className="subscription">
-			<input type="email" value={email} onChange={(e)=>{setemail(e.target.value)}} placeholder="Email Address" className="sub-email"/>
+			<input className="sub-form" type="email" value={email} onChange={(e)=>{setemail(e.target.value)}} placeholder="Email Address" className="sub-email"/>
 			<input type="submit" value="SEND" className="sub-btn"/>
 		</form>
 	</section>
